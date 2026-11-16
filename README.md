@@ -28,6 +28,7 @@ research-os-monitor/
 │   │   └── main.jsx
 │   ├── package.json
 │   └── vite.config.js
+├── skills/               # WorkBuddy 技能包（见 skills/README.md）
 └── README.md
 ```
 
@@ -105,3 +106,11 @@ npm run dev
 6. **GraphAsset**: 图谱资产 (id, project_id, node_count, edge_count, graph_type)
 7. **Alert**: 告警 (id, alert_id, type, severity, message, is_resolved)
 8. **Report**: 报告 (id, report_id, report_type, content, generated_at)
+
+## Skills
+
+`skills/` 下存放 WorkBuddy 技能包，与监控系统解耦，可单独复制到 `~/.workbuddy/skills/` 使用。
+
+- **citation-tree-survey** — 用引文树补全论文参考文献。从现有 bib 取种子，向后拉参考文献、向前拉引用它们且被引最高的下游工作，按跨种子共现排序找出真正缺失的重要研究，再核实元数据、生成 bib 条目、插回正文并检查页数与引用一致性。
+
+用法见 [`skills/README.md`](skills/README.md)。
